@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 env:
+  # ACR_REGISTRY: registry.cn-hangzhou.aliyuncs.com
   ACR_REGISTRY: registry.cn-hangzhou.aliyuncs.com
 
 jobs:
