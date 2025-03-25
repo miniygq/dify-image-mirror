@@ -7,7 +7,7 @@ on:
 
 env:
   # ACR_REGISTRY: registry.cn-hangzhou.aliyuncs.com
-  ACR_REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  ACR_REGISTRY: crpi-hainjgh6bhv5cszz.cn-qingdao.personal.cr.aliyuncs.com
 
 jobs:
   pull-and-push:
