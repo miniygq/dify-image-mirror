@@ -104,3 +104,12 @@ jobs:
 
       - name: Push dify plugin daemon image to Aliyun Registry
         run: docker push ${{ env.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/dify-plugin-daemon:0.0.6-local
+
+      - name: Pull ssrf_proxy image from Docker Hub
+        run: docker pull ubuntu/squid:latest
+
+      - name: Tag ssrf_proxy image for ACR
+        run: docker tag ubuntu/squid:latest ${{ env.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/squid:latest
+
+      - name: Push ssrf_proxy image to Aliyun Registry
+        run: docker push ${{ env.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/squid:latest
