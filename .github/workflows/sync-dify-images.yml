@@ -113,3 +113,13 @@ jobs:
 
       - name: Push ssrf_proxy image to Aliyun Registry
         run: docker push ${{ env.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/squid:latest
+
+      
+      - name: Pull weaviate image from Docker Hub
+        run: docker pull semitechnologies/weaviate:1.19.0
+
+      - name: Tag weaviate image for ACR
+        run: docker tag semitechnologies/weaviate:1.19.0 ${{ env.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/weaviate:1.19.0
+
+      - name: Push weaviate image to Aliyun Registry
+        run: docker push ${{ env.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/weaviate:1.19.0
